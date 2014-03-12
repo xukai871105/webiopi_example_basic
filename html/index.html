@@ -6,14 +6,13 @@
     <script type="text/javascript" src="/webiopi.js"></script>
     <script type="text/javascript">
     webiopi().ready(function() {
-        // Create a "Light" labeled button for GPIO 17
+        // 创建一个GPIO按键，该按键GPIO17关联
         var button = webiopi().createGPIOButton(17, "Light");
 
-        // Append button to HTML element with ID="controls" using jQuery
+        // 向ID编号为controls的div增加一个标签
         $("#controls").append(button);
 
-        // Refresh GPIO buttons
-        // pass true to refresh repeatedly of false to refresh once
+        // 不持续更新GPIO
         webiopi().refreshGPIO(false);
     });
         
